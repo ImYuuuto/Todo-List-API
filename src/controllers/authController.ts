@@ -40,7 +40,7 @@ async function registerUser(req: Request, res: Response) {
     const result = await authModel.addUser(userName, hashPassword);
     return res.status(200).json({
       success: true,
-      message: "user registered by success",
+      message: "user logged in by success",
       result,
     });
   } catch (err) {
@@ -100,6 +100,7 @@ async function loginUser(req: Request, res: Response) {
 
 export const authController = {
   registerUser,
+  loginUser
 };
 
 export default authController;
