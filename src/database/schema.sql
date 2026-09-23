@@ -1,3 +1,4 @@
+-- Active: 1790183513070@@127.0.0.1@3307@mysql
 create database MY_to_do_list;
 
 use MY_to_do_list;
@@ -15,7 +16,7 @@ create table projects (
     Foreign Key (userId) REFERENCES users (userId) on DElete cascade
 );
 
-drop table users;
+
 
 create table tasks (
     taskId int auto_increment primary key,
